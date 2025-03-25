@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
+
+//I used the example given in weekly mini project files but had change it a little
 namespace lexicon_mp_13
 {
     class CurrencyConverter

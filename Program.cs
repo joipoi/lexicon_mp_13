@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-using lexicon_mp_13;
+﻿using lexicon_mp_13;
 using System.Diagnostics;
 using System.Reflection;
 
@@ -11,15 +10,15 @@ class Program
         Tracker tracker = new Tracker();
 
         //Sample data
-        tracker.AddAsset(new Phone("iPhone", "8", "Spain", new DateTime(2023, 3, 25), 970));
-        tracker.AddAsset(new Computer("HP", "Elitebook", "Spain", new DateTime(2022, 6, 1), 1423.70));
-        tracker.AddAsset(new Computer("Lenovo", "Yoga 530", "USA", new DateTime(2023, 3, 20), 1030.40));
-        tracker.AddAsset(new Phone("Motorola", "Razr", "Sweden", new DateTime(2022, 3, 16), 970));
-        tracker.AddAsset(new Computer("HP", "Elitebook", "Sweden", new DateTime(2021, 2, 2), 588));
-        tracker.AddAsset(new Phone("iPhone", "X", "Sweden", new DateTime(2022, 7, 15), 1245));
-        tracker.AddAsset(new Computer("ASUS", "W234", "USA", new DateTime(2022, 4, 21), 1200));
-        tracker.AddAsset(new Phone("iPhone", "11", "Spain", new DateTime(2023, 9, 25), 990));
-        tracker.AddAsset(new Computer("Lenovo", "Yoga 730", "USA", new DateTime(2020, 3, 24), 835));
+        tracker.AddAsset(new Asset("iPhone", "8", "Spain", new DateTime(2023, 3, 25), 970, "Phone"));
+        tracker.AddAsset(new Asset("HP", "Elitebook", "Spain", new DateTime(2022, 6, 1), 1423.70, "Computer"));
+        tracker.AddAsset(new Asset("Lenovo", "Yoga 530", "USA", new DateTime(2023, 3, 20), 1030.40, "Computer"));
+        tracker.AddAsset(new Asset("Motorola", "Razr", "Sweden", new DateTime(2022, 3, 16), 970, "Computer"));
+        tracker.AddAsset(new Asset("HP", "Elitebook", "Sweden", new DateTime(2021, 2, 2), 588, "Computer"));
+        tracker.AddAsset(new Asset("iPhone", "X", "Sweden", new DateTime(2022, 7, 15), 1245, "Phone"));
+        tracker.AddAsset(new Asset("ASUS", "W234", "USA", new DateTime(2022, 4, 21), 1200, "Computer"));
+        tracker.AddAsset(new Asset("iPhone", "11", "Spain", new DateTime(2023, 9, 25), 990, "Phone"));
+        tracker.AddAsset(new Asset("Lenovo", "Yoga 730", "USA", new DateTime(2020, 3, 24), 835, "Computer"));
    
         string input;
         while (true)
@@ -45,10 +44,6 @@ class Program
             }
         }
     }
-
-  
-
-
 }
 
        

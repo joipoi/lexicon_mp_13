@@ -40,6 +40,9 @@ namespace lexicon_mp_13
 
             }
 
+            Console.WriteLine("Enter Asset Type");
+            string assetType = Console.ReadLine();
+
             Console.WriteLine("Enter Brand");
             string brand = Console.ReadLine();
 
@@ -66,13 +69,14 @@ namespace lexicon_mp_13
                 Console.ResetColor();
             }
 
-            AddAsset(new Asset(brand, model, office, purchaseDate, price));
+            AddAsset(new Asset(brand, model, office, purchaseDate, price, assetType));
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Succesfully Added new Asset");
             Console.ResetColor();
         }
         public void DisplayAssets()
         {
+            //Sorts first by office then by PurchaseDate
             Assets = Assets.OrderBy(a => a.Office).ThenBy(a => a.PurchaseDate).ToList();
 
             Console.WriteLine("--------------------------------------------------------------");
@@ -97,7 +101,7 @@ namespace lexicon_mp_13
 
             Console.WriteLine("--------------------------------------------------------------");
         }
-
+        //Sets the line color based on days until end of life
         private static ConsoleColor LineColor(DateTime purchaseDate)
         {
             DateTime endOfLife = purchaseDate.AddYears(Asset.EndOfLife);
